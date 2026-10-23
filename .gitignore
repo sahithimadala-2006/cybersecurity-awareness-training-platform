@@ -1,8 +1,22 @@
-node_modules/
-frontend/node_modules/
+
+# Node.js / React
+**/node_modules/
 frontend/dist/
-backend/target/
+frontend/build/
+
+# Python / FastAPI
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
 .env
-*.log
+.env.*
+!.env.example
+
+# Editors and operating systems
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
