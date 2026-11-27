@@ -1,0 +1,16 @@
+CyberSafe password plus passkey sign-in update
+
+This update changes sign-in to verify the account password first, then require one registered second factor before issuing a session:
+- Passkey: the browser/device prompts for the enrolled passkey after the password is verified.
+- Authenticator: enter the current authenticator or recovery code after the password is verified.
+- If both are enabled, the sign-in screen lets the user choose either enrolled method.
+
+Apply the files in this archive by extracting at the root of the existing project and allowing the listed files to be replaced:
+  backend-python/app/main.py
+  frontend/src/App.jsx
+  frontend/src/App.css
+  frontend/src/context/authcontext.jsx
+
+No database migration is required. Restart both the Python backend and Vite frontend after applying. Sign out of any existing session or open a private browser window to see the new flow. An account with no passkey and no authenticator continues to sign in with email and password only.
+
+The project ZIP supplied in this conversation could be read but not overwritten from this workspace, so this is a small source overlay rather than a replacement of the original archive.
